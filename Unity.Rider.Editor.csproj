@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{327C4E2A-0118-DE7C-B234-BA00CE040926}</ProjectGuid>
+    <ProjectGuid>{3E6BC1E7-73B0-1A55-1F72-329DA6B625CC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Rider.Editor</AssemblyName>
@@ -283,8 +283,26 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.barracuda@1.0.3/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/Pieter/Desktop/VR Experience Jumper/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -643,15 +661,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{7B24CB3A-7B34-2148-BAFB-37980576C461}</Project>
+      <Project>{5271A9AF-4063-848D-8D8A-E9A43BE70A41}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{DACED17A-938D-8ABA-2873-74421BB5DEA0}</Project>
+      <Project>{2190EF00-FF9C-9D19-595A-C24ED613842F}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{21F8C775-9778-3772-0DB9-D46776BF7733}</Project>
+      <Project>{5D53C3E2-F129-57C0-0AD1-B41594A3FE4B}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

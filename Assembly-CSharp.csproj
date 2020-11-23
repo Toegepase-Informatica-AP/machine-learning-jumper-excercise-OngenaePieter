@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{25C18E99-8201-ADE3-8376-86149AC358B2}</ProjectGuid>
+    <ProjectGuid>{C80977DB-80A1-2AED-A3ED-271F5E2B6855}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,7 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Spawn.cs" />
+    <Compile Include="Assets\Scripts\Jumper.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -246,6 +247,24 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.barracuda@1.0.3/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>C:/Users/Pieter/Desktop/machine-learning-jumper-excercise-OngenaePieter/Library/PackageCache/com.unity.ml-agents@1.0.5/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -595,39 +614,87 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{12B6E3D8-E5E2-7802-3067-B92622A0C39C}</Project>
+      <Project>{9E5702BC-3F35-1810-6A3C-BDA48731CBA6}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.MacBLAS.csproj">
+      <Project>{626417EA-314A-334F-B025-60D9E1AB0826}</Project>
+      <Name>Unity.Barracuda.MacBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{0320591B-69B9-4DA5-0E61-7CDBB8F240DF}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{46D10A05-73D7-89D2-6B49-029AB24718C4}</Project>
+      <Project>{E8E600E5-4167-1722-64A3-18546BCB9020}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.Editor.csproj">
+      <Project>{F50D9B91-C2E7-D744-5B4F-A45BCDB24882}</Project>
+      <Name>Unity.Barracuda.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{61A109AE-633B-97A5-9B48-497C219E5F52}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{37727221-6CA7-F986-CF97-07F0B636B0CB}</Project>
+      <Project>{F07621FB-42C4-3898-6AA1-EC07BC57F22B}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{21F8C775-9778-3772-0DB9-D46776BF7733}</Project>
+      <Project>{5D53C3E2-F129-57C0-0AD1-B41594A3FE4B}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{9BC53A8B-9421-92E6-0AE0-1E3BDBA8E7F2}</Project>
+      <Project>{AF0FAE7B-66B1-69CE-C217-AC1874CE3964}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.csproj">
+      <Project>{1AF18707-DE37-61AE-E962-516B69A9AA7F}</Project>
+      <Name>Unity.Barracuda</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
-      <Project>{DE2D9B63-C3AE-6FE9-5834-385E15A342C9}</Project>
+      <Project>{3B005F8C-41A4-DE76-3C72-7D8FCE628C3A}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.iOSBLAS.csproj">
+      <Project>{DB25B733-3C41-3CA4-86FE-664466CDCDEB}</Project>
+      <Name>Unity.Barracuda.iOSBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.CommunicatorObjects.csproj">
+      <Project>{E0C62B13-11C2-6939-512B-8730414A3420}</Project>
+      <Name>Unity.ML-Agents.CommunicatorObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{327C4E2A-0118-DE7C-B234-BA00CE040926}</Project>
+      <Project>{3E6BC1E7-73B0-1A55-1F72-329DA6B625CC}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Barracuda.BurstBLAS.csproj">
+      <Project>{CC21D9C1-4D70-E5B7-2E23-1F89879CD6B5}</Project>
+      <Name>Unity.Barracuda.BurstBLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{7C3BD543-9FC1-3274-6242-48EA98D918FD}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{FFAF5C91-0133-DE73-8046-457AE46689AC}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{42F5921B-35C2-8B3A-24D5-6FBDDFB2EB04}</Project>
+      <Project>{AA411127-820D-874B-4EDB-F4FD2A6EB25D}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.Editor.csproj">
+      <Project>{45DE708A-3156-112B-2064-94D5B5AFE801}</Project>
+      <Name>Unity.ML-Agents.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ML-Agents.csproj">
+      <Project>{2A40D9B8-39D8-8359-0E8B-BBDD868DAC0B}</Project>
+      <Name>Unity.ML-Agents</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{DACED17A-938D-8ABA-2873-74421BB5DEA0}</Project>
+      <Project>{2190EF00-FF9C-9D19-595A-C24ED613842F}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
