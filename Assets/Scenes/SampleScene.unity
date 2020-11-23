@@ -440,7 +440,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 1
 --- !u!23 &995413930
 MeshRenderer:
@@ -590,6 +590,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2461855570609672954, guid: 1c21edf3381ee734391ca8490e097072,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6356eaad099a354478fedf8dff743d02, type: 2}
     - target: {fileID: 2461855570609672959, guid: 1c21edf3381ee734391ca8490e097072,
         type: 3}
       propertyPath: m_Name
@@ -609,6 +614,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010921428}
     m_Modifications:
+    - target: {fileID: 3636968725319865367, guid: a0257d935654a634598cdf769243b850,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5690858658723169735, guid: a0257d935654a634598cdf769243b850,
         type: 3}
       propertyPath: m_Name
@@ -627,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 6762545632337081148, guid: a0257d935654a634598cdf769243b850,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6762545632337081148, guid: a0257d935654a634598cdf769243b850,
         type: 3}

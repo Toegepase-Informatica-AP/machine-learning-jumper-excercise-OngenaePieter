@@ -7,6 +7,7 @@ TagManager:
   - Street
   - Obstacle
   - Jumper
+  - Coin
   layers:
   - Default
   - TransparentFX

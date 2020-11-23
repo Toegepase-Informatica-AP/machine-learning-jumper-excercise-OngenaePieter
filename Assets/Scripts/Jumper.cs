@@ -76,4 +76,12 @@ public class Jumper : Agent
             EndEpisode();
         }
     }
+    private void OnTriggerEnter(Collider collidedObj)
+    {
+        if (collidedObj.gameObject.CompareTag("Coin"))
+        {
+            Debug.Log("Coin collected");
+            AddReward(0.1f);
+        }
+    }
 }
