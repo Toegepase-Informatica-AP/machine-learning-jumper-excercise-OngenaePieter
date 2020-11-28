@@ -14,7 +14,8 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
-        jumper = GetComponentInChildren<Jumper>();
+        jumper = GameObject.Find("Player").GetComponent<Jumper>();
+        //jumper = GetComponentInChildren<Jumper>();
         jumper.OnReset += DestroyAllSpawnedObjects;
         
         StartCoroutine(nameof(Spawn));
