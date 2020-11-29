@@ -51,13 +51,13 @@ Vervolgens maakt u een speler aan (dit kan gewoon een cilinder zijn) en u plaats
 #### Stap 3.3: Spawnpunten aanmaken (x2)
 
 ![](./Fotos/Spawn.PNG)
-Op de uiteindes van de weg moeten spawnpunten komen waar de blokjes waarover de speler zal moeten springen spawnen. Voor deze spawnpunten maakt u een <b>Empty GameObject</b> aan en plaats aan elke kant van de weg een spawnpunt.
+Op de uiteindes van de weg moeten spawnpunten komen waar de blokjes spawnen en waarover de speler zal moeten springen spawnen. Voor deze spawnpunten maakt u een <b>Empty GameObject</b> aan en plaats aan elke kant van de weg een spawnpunt.
 
 #### Stap 3.5: Obstacle aanmaken (x2)
 
 ![](./Fotos/Obstacle.PNG)
 
-Uit de <b>spawners</b> moeten natuurlijk obstakels komen waarover de speler moet springen. U kan een obtacle maken in een vorm naar keuze. Het is alleen belangrijk dat er net boven de <b>Obstacle</b> een doorzichtig vlak bevindt dat ervoor zal zorgen dat er bepaald kan worden wanneer de speler succesvol over een obstakel springt. U kan het vlak doorzichtig maken door de <b>Mesh Renderer</b> optie af te vinken. Aan dit doorzichtig vlak moet u de tag </b>JumpedOver</b> geven. De obstakels moeten nog niet op onze weg staan dus u maakt daar een prefab van. U moet van deze <b>Obstacle</b> twee varianten maken omdat we de obstakels uit twee verschillende <b>spawners</b> laten komen. Beide varianten hebben hun eigen tag nodig bv. <b>Obstacle1</b> en <b>Obstacle2</b>. Aan de <b>Obstacle</b> moet u een <b>Rigidbody</b> en een <b>Box Collider</b> toevoegen. Bij de Rigidbody is het heel belangrijk dat u ook aanduidt <b>Is Trigger</b>.
+Uit de <b>spawners</b> moeten natuurlijk obstakels komen waarover de speler moet springen. U kan een obstacle maken in een vorm naar keuze. Het is alleen belangrijk dat er net boven de <b>Obstacle</b> een doorzichtig vlak bevindt dat ervoor zal zorgen dat er bepaald kan worden wanneer de speler succesvol over een obstakel springt. U kan het vlak doorzichtig maken door de <b>Mesh Renderer</b> optie af te vinken. Aan dit doorzichtig vlak moet u de tag </b>JumpedOver</b> geven. De obstakels moeten nog niet op onze weg staan dus u maakt daar een prefab van. U moet van deze <b>Obstacle</b> twee varianten maken omdat we de obstakels uit twee verschillende <b>spawners</b> laten komen. Beide varianten hebben hun eigen tag nodig bv. <b>Obstacle1</b> en <b>Obstacle2</b>. Aan de <b>Obstacle</b> moet u een <b>Rigidbody</b> en een <b>Box Collider</b> toevoegen. Bij de Rigidbody is het heel belangrijk dat u ook aanduidt <b>Is Trigger</b>.
 
 ![](./Fotos/ObstacleInvisible.PNG)
 
