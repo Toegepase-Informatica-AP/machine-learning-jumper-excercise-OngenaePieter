@@ -4,7 +4,7 @@
 
 ### Inleiding
 
-![](./Fotos/overview.PNG)
+![](./Fotos/Overview.PNG)
 
 In deze tutorial zal u stapsgewijs een Unity project met <b>ML Agents</b> kunnen maken.
 
