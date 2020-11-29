@@ -1,0 +1,6 @@
+model_checkpoint_path: "Jumper-3001681.ckpt"
+all_model_checkpoint_paths: "Jumper-2849979.ckpt"
+all_model_checkpoint_paths: "Jumper-2899989.ckpt"
+all_model_checkpoint_paths: "Jumper-2949944.ckpt"
+all_model_checkpoint_paths: "Jumper-2999937.ckpt"
+all_model_checkpoint_paths: "Jumper-3001681.ckpt"

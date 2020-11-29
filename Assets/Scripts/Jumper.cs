@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using TMPro;
 
 public class Jumper : Agent
 {
@@ -13,6 +14,8 @@ public class Jumper : Agent
     private bool jumpIsReady = true;
     private Rigidbody rBody;
     private Vector3 startingPosition;
+    public TextMeshPro score;
+    public Jumper j;
 
     public event Action OnReset;
     
@@ -28,6 +31,8 @@ public class Jumper : Agent
         {
             RequestDecision();
         }
+
+        score.text = j.GetCumulativeReward().ToString();
 
     }
 
@@ -62,7 +67,7 @@ public class Jumper : Agent
         {
             rBody.AddForce(new Vector3(0, jumpForce, 0), ForceMode.VelocityChange);
             jumpIsReady = false;
-            AddReward(-0.10f);
+            AddReward(-0.1f);
         }
     }
     
@@ -85,16 +90,16 @@ public class Jumper : Agent
 
 
     void OnTriggerEnter(Collider collidedObj)
-    {
-        if (collidedObj.gameObject.CompareTag("Obstacle"))
+    { 
+        if (collidedObj.gameObject.tag == "JumpedOver" || collidedObj.gameObject.tag == "JumpedOver2")
+        {
+            AddReward(0.5f);
+        }
+
+        if (collidedObj.gameObject.tag == "Obstacle")
         {
             AddReward(-1.0f);
             EndEpisode();
-        }
-
-        if (collidedObj.gameObject.CompareTag("avoid"))
-        {
-            AddReward(0.5f);
         }
     }
 
