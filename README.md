@@ -4,7 +4,7 @@
 
 ### Inleiding
 
-![](./Fotos/overview.png)
+![](./Fotos/overview.PNG)
 
 In deze tutorial zal u stapsgewijs een Unity project met <b>ML Agents</b> kunnen maken.
 
@@ -22,14 +22,14 @@ Om het nog een stapje moeilijker te maken zullen de blokjes uit twee richtingen 
 
 ### Stap 1: Project Aanmaken
 
-![](./Fotos/AanmakenProject.png)
+![](./Fotos/AanmakenProject.PNG)
 Als eerste moet u een nieuw Unity project aan via de Unity Hub.
 
 > In deze tutorial is gebruik gemaakt van Unity versie 2019.4.15f1. Het is aangeraden om dezelfde versie of hoger te gebruiken om te voorkomen dat sommige funtionaliteiten niet zouden werken.
 
 ### Stap 2: ML Agents toevoegen aan project
 
-![](./Fotos/MLAgentsInstall.png)
+![](./Fotos/MLAgentsInstall.PNG)
 Eens dat het project geopend is moet u eerst <b>ML Agents</b> toevoegen aan het project. Dit gaat ervoor zorgen dat u uw speler kunt trainen om zelf over de blokjes te springen (Meer informatie over </b>ML Agents</b> kan u hier vinden: https://github.com/Unity-Technologies/ml-agents) Dit kan u doen door te navigeren naar <b>Windows</b> > <b>Package Manager</b>. Daar kan u </b>ML-Agents</b> toevoegen.
 
 > In deze tutorial is er gebruik gemaakt van versie 1.0.5, het is aangeraden dezelfde versie te kiezen als u er zeker van wilt zijn dat alles werkt zoals in deze tutorial bedoeld is.
@@ -40,30 +40,30 @@ Nu dat u </b>ML Agents</b> heeft toegevoegd kan u beginnen met stap per stap all
 
 #### Stap 3.1: Weg aanmaken
 
-![](./Fotos/Street.png)
+![](./Fotos/Street.PNG)
 Eerst moet u een weg maken waarop de speler kan staan en de blokjes kunnen spawnen en bewegen. U geeft een de weg de tag <b>Straat</b>.
 
 #### Stap 3.2: Speler aanmaken
 
-![](./Fotos/Player.png)
+![](./Fotos/Player.PNG)
 Vervolgens maakt u een speler aan (dit kan gewoon een cilinder zijn) en u plaatst deze centraal op de weg. Aan de speler moet u een <b>Rigidbody</b> en een <b>Box Collider</b> toevoegen. Bij de <b>Rigidbody</b> moet u bij <b>Freeze Position</b> X en Z aanvinken en bij <b>Freeze Rotation</b> X, Y en Z. Dit zorgt ervoor dat de <b>Player</b> geen ongewenste bewegingen kan doen bij het springen.
 
 #### Stap 3.3: Spawnpunten aanmaken (x2)
 
-![](./Fotos/Spawn.png)
+![](./Fotos/Spawn.PNG)
 Op de uiteindes van de weg moeten spawnpunten komen waar de blokjes waarover de speler zal moeten springen spawnen. Voor deze spawnpunten maakt u een <b>Empty GameObject</b> aan en plaats aan elke kant van de weg een spawnpunt.
 
 #### Stap 3.5: Obstacle aanmaken (x2)
 
-![](./Fotos/Obstacle.png)
+![](./Fotos/Obstacle.PNG)
 
 Uit de <b>spawners</b> moeten natuurlijk obstakels komen waarover de speler moet springen. U kan een obtacle maken in een vorm naar keuze. Het is alleen belangrijk dat er net boven de <b>Obstacle</b> een doorzichtig vlak bevindt dat ervoor zal zorgen dat er bepaald kan worden wanneer de speler succesvol over een obstakel springt. U kan het vlak doorzichtig maken door de <b>Mesh Renderer</b> optie af te vinken. Aan dit doorzichtig vlak moet u de tag </b>JumpedOver</b> geven. De obstakels moeten nog niet op onze weg staan dus u maakt daar een prefab van. U moet van deze <b>Obstacle</b> twee varianten maken omdat we de obstakels uit twee verschillende <b>spawners</b> laten komen. Beide varianten hebben hun eigen tag nodig bv. <b>Obstacle1</b> en <b>Obstacle2</b>. Aan de <b>Obstacle</b> moet u een <b>Rigidbody</b> en een <b>Box Collider</b> toevoegen. Bij de Rigidbody is het heel belangrijk dat u ook aanduidt <b>Is Trigger</b>.
 
-![](./Fotos/ObstacleInvisible.png)
+![](./Fotos/ObstacleInvisible.PNG)
 
 #### Stap 3.6: DeathZones aanmaken
 
-![](./Fotos/DeathZone.png)
+![](./Fotos/DeathZone.PNG)
 Om te vermijden dat er te veel blokjes in de omgeving komen moet u de blokjes vernietigen wanneer ze af het speelveld gaan. Om dit te doen maakt u zowel links als rechts van de straat een plane en maakt deze invisible.
 
 #### Stap 3.7: Score toevoegen
@@ -71,7 +71,7 @@ Om te vermijden dat er te veel blokjes in de omgeving komen moet u de blokjes ve
 Om visueel de score van onze <b>Player</b> te tonen voegt u een Text - TextMeshPro toe aan de scene. Hiervoor moet u eerst TMP Essentials toevoegen, u zal hier een popup voor krijgen.
 
 Na deze stappen zou u projectstructuur er als volgende moeten uitzien:
-![](./Fotos/lijst.png)
+![](./Fotos/lijst.PNG)
 
 ### Stap 4: Scripts
 
@@ -218,12 +218,12 @@ Ook moet u aan <b>Player</b> de volgende scripts uit de <b>ML Agents</b> scripts
 
 > Deze scripts bevinden zich in <b>Packages</b> > <b>ML Agents</b> > <b>Editor</b>
 
-![](./Fotos/RayPerception.png)
-![](./Fotos/Behavior.png)
+![](./Fotos/RayPerception.PNG)
+![](./Fotos/Behavior.PNG)
 
 Belangrijk bij de Ray perception is dat u de instellingen van het script veranderd zodat er zowel naar links als naar rechts een <b>straal</b> is zodat de speler <b>Obstacles</b> uit beide richtingen kan zien aankomen.
 
-![](./Fotos/straal.png)
+![](./Fotos/straal.PNG)
 
 Daarna voegt u volgend script toe aan <b>spawner</b>:
 
@@ -385,7 +385,7 @@ U kan de resultaten van de training zien door Tensorboard te openen met volgende
 
 U kan dan navigeren in een internetbrowser naar keuze naar localhost:6006 en daar zal u alle data vinden over de training.
 
-![](./Fotos/Tensor.png)
+![](./Fotos/Tensor.PNG)
 
 ## Bronvermelding
 
