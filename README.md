@@ -385,7 +385,15 @@ U kan de resultaten van de training zien door Tensorboard te openen met volgende
 
 U kan dan navigeren in een internetbrowser naar keuze naar localhost:6006 en daar zal u alle data vinden over de training.
 
+## Conclusie
+
+Na de tensorboard te openen is dit het resultaat.
+
 ![](./Fotos/Tensor.PNG)
+
+![](./Fotos/grafiek.PNG)
+
+Op de grafiek is te zien dat vanaf ongeveer 100K steps de <b>Player</b> begint te leren. In het begin was er een kleine daling in de grafiek, dit is te verklaren doordat de <b>Player</b> in het begin springt en daar wordt hij voor afgestraft. Eens hij dat doorheeft leert hij snel bij. De <b>Reward</b> is daarna duidelijk in stijgende lijn en dat betekend dat onze <b>environment</b> werkt naar behoren.
 
 ## Bronvermelding
 
